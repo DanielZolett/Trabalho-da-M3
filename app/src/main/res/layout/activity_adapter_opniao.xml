@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_adapter_opniao"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:id="@+id/Llver">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/LlDescri"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="oque"
+                android:layout_weight="1"
+                android:id="@+id/Tvordem"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="descricao"
+                android:layout_weight="1"
+                android:id="@+id/Tvdescri"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="avaliacao"
+                android:layout_weight="1"
+                android:id="@+id/Tvavaliado"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/Llver"
+            android:layout_weight="2"
+            android:id="@+id/IvPrato"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

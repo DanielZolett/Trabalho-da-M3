@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Registro_de_opiniao</string>
+    <string name="title_activity_adapter_opniao">Adapter_opniao</string>
+    <string name="title_activity_tela_principal">Tela_principal</string>
+</resources>
