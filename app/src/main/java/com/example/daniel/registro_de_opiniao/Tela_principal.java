@@ -67,47 +67,11 @@ public class Tela_principal extends Activity {
         rvListaCadastro.setLayoutManager(formaApresentacao);
         Adapter_opniao adaptador = new Adapter_opniao(this.getApplicationContext(), lista);
         rvListaCadastro.setAdapter(adaptador);
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-        } else {
-            locationmaneger = (LocationManager)
-                    getSystemService(Context.LOCATION_SERVICE);
-            location = locationmaneger.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        }
-
-        if (location != null){
-
-            longitutde = location.getLongitude();
-            latitude = location.getLatitude();
-        }
-
-        try{
-            endereco = buscarEndereco(latitude,longitutde);
-            //cidade = endereco.getLocality();
-
-        } catch (IOException e){
-            Log.i("GPS",e.getMessage());
-        }
     }
 
     public void Cadastrar (View origem){
         Intent abridor = new Intent(this.getApplicationContext(), MainActivity.class);
         startActivity(abridor);
-    }
-
-    public Address buscarEndereco(double latitude, double longitude) throws IOException{
-
-        Geocoder geocoder;
-        Address address = null;
-        List<Address> addresses;
-
-        geocoder = new Geocoder(getApplicationContext());
-
-        addresses = geocoder.getFromLocation(latitude,longitude,1);
-        if(addresses.size()>0){
-            address = addresses.get(0);
-        }
-        return address;
     }
 
 

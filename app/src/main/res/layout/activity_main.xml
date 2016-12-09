@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Entrada"
+            android:checked="true"
             android:id="@+id/RbEntra"/>
         <RadioButton
             android:layout_width="wrap_content"
@@ -45,54 +46,17 @@
             android:id="@+id/RbLanch"/>
     </RadioGroup>
 
-    <LinearLayout
+
+    <RatingBar
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/RgOpiniao"
-        android:id="@+id/LlQualificacao">
-
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/RgOpiniao"
-            style="?android:attr/starStyle"
-            android:layout_weight="1"
-            android:id="@+id/CbNivel_1"/>
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/RgOpiniao"
-            style="?android:attr/starStyle"
-            android:layout_weight="1"
-            android:id="@+id/CbNivel_2"/>
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/RgOpiniao"
-            style="?android:attr/starStyle"
-            android:layout_weight="1"
-            android:id="@+id/CbNivel_3"/>
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/RgOpiniao"
-            style="?android:attr/starStyle"
-            android:layout_weight="1"
-            android:id="@+id/CbNivel_4"/>
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/RgOpiniao"
-            style="?android:attr/starStyle"
-            android:layout_weight="1"
-            android:id="@+id/CbNivel_5"/>
-    </LinearLayout>
-
+        android:layout_alignParentStart="true"
+        android:id="@+id/ratingBar2" />
     <Button
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/LlQualificacao"
+        android:layout_below="@+id/ratingBar2"
         android:text="Foto"
         android:layout_marginEnd="5dp"
         android:id="@+id/BtFoto"
@@ -114,5 +78,7 @@
         android:layout_marginTop="5dp"
         android:id="@+id/BtSalvar"
         android:onClick="Salvar"/>
+
+
 
 </RelativeLayout>
